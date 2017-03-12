@@ -6,15 +6,10 @@
 			namespace="/"
 			extends="struts-default">
 	<action 
-	name="LoginAction"
-	class="com.my.action.login">
+	name="*"
+	class="com.my.action.userAction"
+	method="{1}">
 		<result name="ok">/index.jsp</result>
 		<result name="no">/register.jsp</result>
-	</action>
-	<action 
-	name="RegisterAction"
-	class="com.my.action.register"
-	>
-		<result name="ok">/index.jsp</result>
-		<result name="no">/error.html</result>
+		<result name="error">/error.html</result>
 	</action></package></struts>    
