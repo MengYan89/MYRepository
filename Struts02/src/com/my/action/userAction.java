@@ -1,8 +1,10 @@
 package com.my.action;
 
 import java.sql.ResultSet;
+import java.util.Map;
 
 import com.my.dao.UserDao;
+import com.opensymphony.xwork2.ActionContext;
 
 public class userAction  {
 	String userName;
@@ -13,8 +15,11 @@ public class userAction  {
 	public String LoginAction() {
 		UserDao dao = new UserDao();
 		int key=dao.queryUser(userName, password);
-		if(key==1)
+		if(key==1){
+			Map map=(Map)ActionContext.getContext().get("session");
+			map.put("uname", userName);
 		 return "ok";//index.jsp
+		}
 		else
 		 return "no"; //login.html
 		
@@ -24,6 +29,7 @@ public class userAction  {
 		int key=0;
 		key=dao.queryname(userName);
 		if(key==1){
+			
 			dao.insertUser(userName, password);
 			return "ok";
 		}
