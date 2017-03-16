@@ -5,11 +5,28 @@
 	<package name="com.my.action" 
 			namespace="/"
 			extends="struts-default">
+	
+	<interceptors>
+		<interceptor name="loginIT" 
+					 class="com.my.interceptor.LoginInterceptor">
+		</interceptor>
+	</interceptors>
 	<action 
-	name="*"
+	name="*_"
 	class="com.my.action.userAction"
 	method="{1}">
 		<result name="ok">/index.jsp</result>
 		<result name="no">/register.jsp</result>
-		<result name="error">/error.html</result>
-	</action></package></struts>    
+		<result name="error">/error.jsp</result>
+	</action>
+	
+	<action name="EditAction"
+			class="com.my.action.userAction"
+			method="EditAction">
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<interceptor-ref name="loginIT"></interceptor-ref>
+		<result name="ok">/edit.jsp</result>
+		<result name="error">/error.jsp</result>
+	</action>
+	</package></struts>    
+	

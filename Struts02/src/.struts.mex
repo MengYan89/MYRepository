@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Struts2Diagram version="2.0">
-  <webResource name="index.jsp" path="/index.jsp" location="375,10" size="150,55" />
-  <webResource name="register.jsp" path="/register.jsp" location="361,274" size="150,55" />
-  <webResource name="login.html" path="/login.html" location="369,183" size="150,55" />
   <package name="com.my.action" location="64,101" size="233,131">
-    <action name="LoginAction" location="67,22" size="150,62">
+    <action name="*" location="0,0" size="0,0">
       <result name="ok">
         <resourceEdge source="ok" routing="0" target="index.jsp" />
       </result>
       <result name="no">
         <resourceEdge source="no" routing="0" target="register.jsp" />
       </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.html" />
+      </result>
     </action>
   </package>
+  <webResource name="index.jsp" path="/index.jsp" location="375,10" size="150,55" />
+  <webResource name="register.jsp" path="/register.jsp" location="361,274" size="150,55" />
+  <webResource name="login.html" path="/login.html" location="369,183" size="150,55" />
+  <webResource name="error.html" path="/error.html" location="0,0" size="0,0" />
+  <webResource name="edit.jsp" path="/edit.jsp" location="233,284" size="150,55" />
 </Struts2Diagram>
 

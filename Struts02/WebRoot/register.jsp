@@ -23,11 +23,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    <form action="RegisterAction.action" method="post">
+    <form action="RegisterAction_.action" method="post">
     <table>
     	<tr>
     		<td>Username</td>
     		<td><input type="text" name="userName"></td>
+    		
     	</tr>
     	<tr>
     		<td>password</td>
@@ -35,6 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	</tr>
     	<tr>
     		<td><input type="submit" value="注册"></td>
+    		<td><input type="button" onclick="location.href='index.jsp'" value="返回"></td>
     	</tr>
     </table>
     </form>
