@@ -7,9 +7,26 @@
 	namespace="/" 
 	extends="struts-default">
 	
+	<interceptors>
+		<interceptor name="myit" 
+					 class="com.nsu.interceptor.MyValidateInterceptor">
+		</interceptor>
+	</interceptors>
+	
 		<action 
 		name="login" 
-		class="com.nsu.web.action">
-			<result name="ok">/index.jsp</result>
-			<result name="failure">/login.html</result>
-			</action></package></struts>    
+		class="com.nsu.web.action"
+		method="login"
+		>
+			<result name="ok" >/index.jsp</result>
+			<result name="failure">/login.jsp</result>
+			</action>
+			
+		<action name="edit" class="com.nsu.web.action" method="edit">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<interceptor-ref name="myit"></interceptor-ref>
+			<result name="edit">/edit.html</result>
+			<result name="failure">/login.jsp</result>
+		</action>
+			
+			</package></struts>    

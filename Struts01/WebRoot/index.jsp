@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -22,6 +23,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
    <a>一个刚开始接触ssh的人的联系产物</a>
-    This is my JSP page. <br>
+    This is my JSP page,<%=request.getAttribute("uname") %> <br>
   </body>
 </html>
