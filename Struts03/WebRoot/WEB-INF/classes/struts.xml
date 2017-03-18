@@ -2,13 +2,19 @@
 <!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
 <struts>
 
-	<package name="com.my.action" namespace="/"
-		extends="struts-default">
+	<package name="com.my.action" 
+			 namespace="/"
+	 	   	 extends="struts-default">
+		
+	<interceptors>
+		<interceptor name="token" class="org.apache.struts2.interceptor.TokenInterceptor"></interceptor>
+		<interceptor name="tokenSession" class="org.apache.struts2.interceptor.TokenSessionStoreInterceptor"/>
+	</interceptors>
+		
 	<action name="*_"
 			class="com.my.action.AdminAction"
 			method="{1}">
-		
-		
+
 	<result name="ok">/index.jsp</result>
 	<result name="error">/error.jsp</result>
 	
@@ -17,8 +23,13 @@
 	<action name="RegisterAction"
 			class="com.my.action.AdminAction"
 			method="RegisterAction">
-	<result name="ok">/index.jsp</result>
-	<result name="error">/error.jsp</result>
+			
+			<interceptor-ref name="defaultStack"/><!-- 需要注意拦截器栈的配置顺序-->  
+            <interceptor-ref name="token"/><!-- 防止表单重复提交的拦截器-->  
+            <result name="invalid.token">/index.jsp</result><!-- 名字必须为invalid.token-->  
+            
+			<result name="ok">/index.jsp</result>
+			<result name="error">/error.jsp</result>
 	
 	</action>
 	

@@ -37,12 +37,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	<tr>
     		<td>请输入密码:<s:password name="adminPwd"></s:password></td>
     	</tr>
-    	<!--<s:token></s:token>-->
+    	<s:token></s:token>
     	<tr>
     		<td><s:submit value="注册"></s:submit></td>
-    	</tr>
-    	<tr>
-    		<td><button onblur="location.href='index.jsp'">返回首页</button></td> 
+    		<td><input type="button" onclick="location.href='index.jsp'" value="返回首页"></td>
     	</tr>
     </table>
     </s:form>

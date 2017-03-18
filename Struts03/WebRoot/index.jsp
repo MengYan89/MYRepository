@@ -40,7 +40,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   				<td><button onclick="location.href='register.jsp'">注册</button></td>
   			</c:if>
   			<c:if test="${aName!=null }">
-  				<td><button>注销</button></td>
+  				<td><button onclick="location.href='LogoutAction_.action'">注销</button></td>
   			</c:if>
   		</tr>
   		<tr>

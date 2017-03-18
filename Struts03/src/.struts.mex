@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="com.my.action" location="225,10" size="280,350">
+    <action name="*_" location="65,47" size="150,62">
+      <result name="ok">
+        <resourceEdge source="ok" routing="0" target="index.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+    <action name="RegisterAction" location="65,176" size="150,83">
+      <result name="invalid.token">
+        <resourceEdge source="invalid.token" routing="0" target="index.jsp" />
+      </result>
+      <result name="ok">
+        <resourceEdge source="ok" routing="0" target="index.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="index.jsp" path="/index.jsp" location="10,192" size="150,55" />
+  <webResource name="error.jsp" path="/error.jsp" location="570,52" size="150,55" />
+  <webResource name="query.jsp" path="/query.jsp" location="566,324" size="150,55" />
+</Struts2Diagram>
+

@@ -48,9 +48,12 @@ public class AdminAction {
 			return "ok";
 		}
 		
-			
-		
-		
+	}
+	//×¢Ïú
+	public String LogoutAction(){
+		Map map = (Map)ActionContext.getContext().get("session");
+		map.remove("aName");
+		return "ok";
 	}
 	
 	
