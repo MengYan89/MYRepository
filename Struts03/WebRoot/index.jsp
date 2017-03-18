@@ -44,7 +44,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   			</c:if>
   		</tr>
   		<tr>
-  				<td><button>查询</button></td>
+  				<td><button onclick="location.href='QueryUsersAction.action'">查询</button></td>
   		</tr>
   		
   		

@@ -33,5 +33,12 @@
 	
 	</action>
 	
+	<action name="QueryUsersAction"
+			class="com.my.action.UserAction"
+			method="QueryUsersAction">
+			
+			<result name="ok">/query.jsp</result>
+	</action>
+	
 	
 	</package></struts>    

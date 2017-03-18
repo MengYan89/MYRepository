@@ -1,4 +1,7 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+
+<!-- 连接jstl标签 -->
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,6 +26,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
+  <table>
+  		<tr>
+  			<td>昵称</td>
+  			<td>性别</td>
+  			<td>年龄</td>
+  			<td>邮箱</td>
+  			<td>手机</td>
+  			<td>地址</td>
+  		</tr>
+    <c:forEach var="list" items="${Ulist }">
+    	<tr>
+    		<td>${list.nickName }</td>
+    		<td>${list.sex }</td>
+    		<td>${list.age }</td>
+    		<td>${list.email }</td>
+    		<td>${list.phone }</td>
+    		<td>${list.address }</td>
+    	</tr>
+    	
+    </c:forEach>
+    <tr>
+    	<td><button onclick="location.href='index.jsp'">返回主页</button></td>
+    </tr>
+   </table>
+   
   </body>
 </html>

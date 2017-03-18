@@ -42,9 +42,11 @@ public class AdminAction {
 		
 		if(dao.QueryAdminName(adminName)){
 			map.put("msg", "ÕËºÅÃÜÂëÒÑ´æÔÚ");
+			map.remove("admin");
 			return "error";
 		}else{
 			dao.InserAdmin(admin);
+			map.remove("admin");
 			return "ok";
 		}
 		
