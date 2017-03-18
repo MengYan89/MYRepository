@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+	<package name="com.my.action" namespace="/"
+		extends="struts-default">
+	<action name="*_"
+			class="com.my.action.AdminAction"
+			method="{1}">
+		
+		
+	<result name="ok">/index.jsp</result>
+	<result name="error">/error.jsp</result>
+	
+	</action>
+	
+	<action name="RegisterAction"
+			class="com.my.action.AdminAction"
+			method="RegisterAction">
+	<result name="ok">/index.jsp</result>
+	<result name="error">/error.jsp</result>
+	
+	</action>
+	
+	
+	</package></struts>    
