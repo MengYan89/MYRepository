@@ -57,7 +57,12 @@ public class AdminAction {
 		map.remove("aName");
 		return "ok";
 	}
-	
+	//找回密码
+	public String RetrievePasswordAction(){
+		Map map = (Map)ActionContext.getContext().get("session");
+		map.put("msg", "功能开发中");
+		return "error";
+	}
 	
 	
 	public String getAdminName() {

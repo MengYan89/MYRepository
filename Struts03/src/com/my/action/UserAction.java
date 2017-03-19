@@ -9,7 +9,7 @@ import com.opensymphony.xwork2.ActionContext;
 
 public class UserAction {
 	
-	
+	//²éÑ¯È«²¿User
 	public String QueryUsersAction(){
 		UserDao dao = new UserDao();
 		List<Users> Ulist=dao.QueryUsers();

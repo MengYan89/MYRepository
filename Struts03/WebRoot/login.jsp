@@ -36,7 +36,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		<tr>
     			<td><input type="submit" value="登陆"></td>
     			<td><input type="button" onclick="location.href='index.jsp'"  value="返回"></td>
-    			<td><a onclick="location.href='error.jsp'">忘记密码</a></td>
+    			<td><a onclick="location.href='RetrievePasswordAction_.action'">忘记密码</a></td>
     		</tr>
     	</table>
     </form>

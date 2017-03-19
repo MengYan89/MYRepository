@@ -26,5 +26,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
   		<h1>${msg }</h1>
+  		<button onclick="history.go(-1)">返回</button>
   </body>
 </html>
