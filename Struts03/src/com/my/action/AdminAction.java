@@ -5,8 +5,9 @@ import java.util.Map;
 import com.my.dao.AdminDao;
 import com.my.entity.Admin;
 import com.opensymphony.xwork2.ActionContext;
+import com.opensymphony.xwork2.ActionSupport;
 
-public class AdminAction {
+public class AdminAction extends ActionSupport{
 	String adminName;
 	String adminPwd;
 	
