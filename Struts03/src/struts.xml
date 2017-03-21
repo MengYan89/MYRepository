@@ -30,6 +30,7 @@
 			<interceptor-ref name="defaultStack"/><!-- 需要注意拦截器栈的配置顺序-->  
             <interceptor-ref name="token"/><!-- 防止表单重复提交的拦截器-->  
             <result name="invalid.token">/index.jsp</result><!-- 名字必须为invalid.token-->  
+            <result name="input">/register.jsp</result>
             
 			<result name="ok">/index.jsp</result>
 			<result name="error">/error.jsp</result>

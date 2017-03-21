@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib uri="/struts-tags" prefix="s"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -28,10 +29,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		<tr>
     			<td>用户名</td>
     			<td><input type="text" name="adminName" ></td>
+    			<td><s:fielderror fieldName="adminName"></s:fielderror></td>
     		</tr>
     		<tr>
     			<td>密码</td>
     			<td><input type="password" name="adminPwd"></td>
+    			<td><s:fielderror fieldName="adminPwd"></s:fielderror></td>
     		</tr>
     		<tr>
     			<td><input type="submit" value="登陆"></td>
