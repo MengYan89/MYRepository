@@ -4,17 +4,17 @@
         "http://struts.apache.org/dtds/xwork-validator-1.0.2.dtd">
 <validators>
 	<field name="adminName">
-    	<field-validator type="requiredstring">
-    	<param name="trim">true</param>
-		<message>请输入用户名</message>
+    	<field-validator type="requiredstring"><!-- 用户名不得为空 -->
+    	<param name="trim">true</param><!-- 消除空格 -->
+		<message>请输入用户名</message><!-- 返回错误信息 -->
     	</field-validator>
     </field>
     
     
     <field name="adminPwd">
-		<field-validator type="requiredstring">
-		<param name="trim">true</param>
-		<message>请输入密码</message>
+		<field-validator type="requiredstring"><!-- 密码不得为空 -->
+		<param name="trim">true</param><!-- 消除空格 -->
+		<message>请输入密码</message><!-- 返回错误信息 -->
 		</field-validator>
 
     </field>

@@ -5,29 +5,29 @@
 <validators>
 	<field name="adminName">
 		<field-validator type="requiredstring"><!-- 用户名不得为空 -->
-		<param name="trim">true</param> <!-- 空格检验 -->
+		<param name="trim">true</param> <!-- 消除空格 -->
 		<message>请输入用户名</message><!-- 返回错误信息 -->
 		</field-validator>
 		
 		<field-validator type="stringlength">
-		<param name="minLength">4</param>
-		<param name="maxLength">10</param>
-		<message>用户名长度应该在4到10个字符之间</message>
+		<param name="minLength">4</param><!-- 最少为4个字符 -->
+		<param name="maxLength">10</param><!-- 最多为10个字符 -->
+		<message>用户名长度应该在4到10个字符之间</message><!-- 返回错误信息 -->
 		</field-validator>
 		
 		
 	</field>
 	
 	<field name="adminPwd">
-		<field-validator type="requiredstring">
-		<param name="trim">true</param>
-		<message>请输入密码</message>
+		<field-validator type="requiredstring"><!-- 密码不得为空 -->
+		<param name="trim">true</param><!-- 消除空格 -->
+		<message>请输入密码</message><!-- 返回错误信息 -->
 		</field-validator>
 		
 		<field-validator type="stringlength">
-		<param name="minLength">6</param>
-		<param name="maxLength">18</param>
-		<message>密码长度应该在6到18个字符之间</message>
+		<param name="minLength">6</param><!-- 最少为6个字符 -->
+		<param name="maxLength">18</param><!-- 最多为18个字符 -->
+		<message>密码长度应该在6到18个字符之间</message><!-- 返回错误信息 -->
 		</field-validator>
 	</field>
 
