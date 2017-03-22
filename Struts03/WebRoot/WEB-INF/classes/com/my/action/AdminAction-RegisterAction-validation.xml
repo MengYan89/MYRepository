@@ -30,5 +30,17 @@
 		<message>密码长度应该在6到18个字符之间</message><!-- 返回错误信息 -->
 		</field-validator>
 	</field>
+	
+	<field name="readminPwd">
+		<field-validator type="requiredstring"><!-- 密码不得为空 -->
+		<param name="trim">true</param><!-- 消除空格 -->
+		<message>请再次输入密码</message><!-- 返回错误信息 -->
+		</field-validator>
+		
+		<field-validator type="fieldexpression">
+		<param name="expression"><![CDATA[repassword.equals(password)]]></param>
+		<message>两次密码输入不一致!</message>
+		</field-validator>
+	</field>
 
 </validators>

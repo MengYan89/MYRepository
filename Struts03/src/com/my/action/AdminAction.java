@@ -4,12 +4,14 @@ import java.util.Map;
 
 import com.my.dao.AdminDao;
 import com.my.entity.Admin;
+import com.my.entity.Key;
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class AdminAction extends ActionSupport{
 	String adminName;
 	String adminPwd;
+	Key key;
 	
 	//µÇÂ½ÑéÖ¤
 	public String LoginAction(){
@@ -81,5 +83,13 @@ public class AdminAction extends ActionSupport{
 	public void setAdminPwd(String adminPwd) {
 		this.adminPwd = adminPwd;
 	}
+	
+	public Key getKey() {
+		return key;
+	}
+	public void setKey(Key key) {
+		this.key = key;
+	}
+
 
 }

@@ -32,12 +32,18 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     		<h1>会员注册</h1>
     	</tr>
     	<tr>
-    		<td>请输入用户名:<s:textfield name="adminName"></s:textfield></td><!-- textfield自带fielderror的属性 -->
+    		<td><s:textfield label="用户名" name="adminName"></s:textfield></td><!-- textfield自带fielderror的属性 -->
     		<!--<td><s:fielderror fieldName="adminName"></s:fielderror></td>-->
     	</tr>
     	<tr>
-    		<td>请输入密码:<s:password name="adminPwd"></s:password></td>
+    		<td><s:password label="密码" name="adminPwd"></s:password></td>
     		<!--<td><s:fielderror fieldName="adminPwd"></s:fielderror></td>-->
+    	</tr>
+    	<tr>
+    		<td><s:password label="再次输入密码" name="readminPwd"></s:password></td>
+    	</tr>
+    	<tr>
+    		<td><s:textfield label="邀请码" name="key"></s:textfield></td>
     	</tr>
     	<s:token></s:token>
     	<tr>
