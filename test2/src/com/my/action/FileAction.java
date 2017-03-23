@@ -20,7 +20,7 @@ public class FileAction extends ActionSupport {
 			String strNewFileName = UUID.randomUUID().toString();
 			String suffix = myUploadFileName.substring(myUploadFileName.lastIndexOf("."));
 			strNewFileName += suffix;
-			
+			//以服务器的文件保存地址和原文件名建立上传文件输出流
 			FileOutputStream fos = new FileOutputStream(getSavePath() + "\\" + strNewFileName);
 			myUploadFileName = strNewFileName;
 			FileInputStream fis = new FileInputStream(getMyUpload());
@@ -59,10 +59,12 @@ public class FileAction extends ActionSupport {
 		}
 		
 		/*********/
+		//返回上传文件保存位置
 		public String getSavePath () throws Exception{
 			String str = ServletActionContext.getServletContext().getRealPath(savePath);
 			return str;
 		}
+		//获取Struts.xml文件中配置的值
 		public void setSavePath(String savePath) {
 			this.savePath = savePath;
 		}
